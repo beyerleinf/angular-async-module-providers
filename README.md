@@ -1,27 +1,31 @@
-# AsyncModuleProvider
+# Angular async module providers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+> Example repository showing how one can load config values asynchronously and provide them using ModuleWithProviders
 
-## Development server
+## How does it work?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+We're using `APP_INITIALIZER` to load a config from a arbitrary source. This could literally be done however you want. After loading, we save the values we need in properties of the service so that they are available after initialization.
 
-## Code scaffolding
+Finally, we have a module (in this case `ConfigModule`) which uses the `forRoot` method to provide a InjectionToken with the value of a property loaded in our Service.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Building this repository
 
-## Build
+First you need to install all required packages
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+```
 
-## Running unit tests
+After you've done that, build the app and host it with whatever you prefer
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm run build
+```
 
-## Running end-to-end tests
+OR
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+serve it using the Angular CLI
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm start
+```

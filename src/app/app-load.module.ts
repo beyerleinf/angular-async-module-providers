@@ -1,6 +1,6 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { ConfigService } from './services/config/config.service';
 import { HttpClientModule } from '@angular/common/http';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { ConfigService } from './services/config/config.service';
 
 function appLoadFactory(config: ConfigService) {
   return () => config.loadConfig().toPromise();

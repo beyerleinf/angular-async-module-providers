@@ -6,7 +6,7 @@
 
 We're using `APP_INITIALIZER` to load a config from a arbitrary source. This could literally be done however you want. After loading, we save the values we need in properties of the service so that they are available after initialization.
 
-Finally, we have a module (in this case `ConfigModule`) which uses the `forRoot` method to provide a InjectionToken with the value of a property loaded in our Service.
+Then we just use a factory to povide the `InjectionToken` we need.
 
 ## Building this repository
 

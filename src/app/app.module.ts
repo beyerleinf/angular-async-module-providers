@@ -7,12 +7,7 @@ import { ConfigModule } from './config.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    AppLoadModule,
-    BrowserModule,
-    HttpClientModule,
-    ConfigModule.forRoot(),
-  ],
+  imports: [AppLoadModule, BrowserModule, HttpClientModule, ConfigModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

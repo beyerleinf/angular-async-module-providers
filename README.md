@@ -1,12 +1,12 @@
 # Angular async module providers
 
-> Example repository showing how one can load config values asynchronously and provide them using ModuleWithProviders
+> Example repository showing how one can load config values asynchronously and provide them using InjectionTokens
+
+**Note: The previous version of this solution can be found [here](https://github.com/beyerleinf/angular-async-module-providers/tree/previousVersion)**
 
 ## How does it work?
 
-We're using `APP_INITIALIZER` to load a config from a arbitrary source. This could literally be done however you want. After loading, we save the values we need in properties of the service so that they are available after initialization.
-
-Then we just use a factory to povide the `InjectionToken` we need.
+We load the config using `fetch` within _main.ts_. Then we pass our providers to `platformBrowserDynamic()`. And that's it.
 
 ## Building this repository
 
